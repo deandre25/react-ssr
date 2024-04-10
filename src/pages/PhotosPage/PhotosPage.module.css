@@ -1,0 +1,58 @@
+.photoPage {
+  padding: 20px 0;
+}
+
+.photoPage h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.photoPage a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.photoPage a:hover {
+  text-decoration: underline;
+}
+
+.photoContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photoCard {
+  width: 250px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.photoCard img {
+  width: 100%;
+  height: auto;
+}
+
+.photoCard .cardContent {
+  padding: 10px;
+}
+
+.photoCard .cardContent span {
+  display: block;
+  margin-top: 5px;
+}
+
+.photoCard .cardAction {
+  padding: 10px;
+  text-align: center;
+}
+
+.photoCard .cardAction a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.photoCard .cardAction a:hover {
+  text-decoration: underline;
+}

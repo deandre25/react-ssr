@@ -1,0 +1,11 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Автоматично визначаємо кількість колонок з мінімальною шириною 300px */
+  gap: 20px; /* Проміжок між карточками */
+}

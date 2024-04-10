@@ -1,0 +1,51 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+.albumsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+}
+
+.albumCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.albumCard h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.albumCard a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.albumCard a:hover {
+  text-decoration: underline;
+}
+
+.albumCard p {
+  font-size: 14px;
+  color: #555;
+}

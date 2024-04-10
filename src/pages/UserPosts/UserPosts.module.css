@@ -1,0 +1,41 @@
+.userPosts {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.userPosts h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.userPosts a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.userPosts a:hover {
+  text-decoration: underline;
+}
+
+.userPosts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.userPosts li {
+  border: 1px solid #960000;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.userPosts li h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.userPosts li p {
+  font-size: 16px;
+  margin-bottom: 0;
+}

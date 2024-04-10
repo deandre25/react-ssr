@@ -1,0 +1,48 @@
+.userDetails {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.userDetails h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.userDetails p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.userDetails strong {
+  font-weight: bold;
+}
+
+.userDetails .address {
+  font-style: italic;
+  color: #777;
+}
+
+.userDetails .geo {
+  font-weight: bold;
+  color: #777;
+}
+
+.userDetails .company {
+  font-weight: bold;
+  color: #777;
+}
+
+.userDetails a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.userDetails a:hover {
+  text-decoration: underline;
+}
