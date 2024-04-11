@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import styles from './UserPosts.module.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './UserPosts.module.css';
 
-const UserPosts = () => {
-  const { userId } = useParams();
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
-      .then(response => response.json())
-      .then(data => setPosts(data));
-
-    console.log(posts)
-  }, [userId]);
-
+const UserPosts = ({posts, userId}) => {
   return (
-    <div className={styles.userPosts}>
+    <div className="userPosts">
       <h1>User Posts</h1>
       <Link to={`/users/${userId}`}>Back to User Details</Link>
       <ul>
