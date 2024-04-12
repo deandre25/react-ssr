@@ -10,7 +10,7 @@ import UserPosts from "../src/pages/UserPosts/UserPosts";
 import UserAlbums from "../src/pages/UserAlbums/UserAlbums";
 import PhotosPage from "../src/pages/PhotosPage/PhotosPage";
 
-const PORT = 8000;
+const PORT = 3000;
 
 const app = express();
 
@@ -25,13 +25,21 @@ app.get("/", (req, res) => {
         </StaticRouter>
       );
 
+      const metaTags = `
+        <title>Proxy Seller - Home</title>
+        <meta name="description" content="Welcome to Proxy Seller">
+      `;
+
       fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
         if (err) {
           console.error(err);
           return res.status(500).send("Some error happened!");
         };
 
-        const html = data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+        const html = data
+          .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+          .replace('<title>React App</title>', metaTags);
+        
         res.send(html);
       });
     })
@@ -53,13 +61,21 @@ app.get("/users/:userId", (req, res) => {
         </StaticRouter>
       );
 
+      const metaTags = `
+        <title>Proxy Seller - User Details</title>
+        <meta name="description" content="Proxy Seller - View user details">
+      `;
+
       fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
         if (err) {
           console.error(err);
           return res.status(500).send("Some error happened!");
         };
 
-        const html = data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+        const html = data
+          .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+          .replace('<title>React App</title>', metaTags);
+
         res.send(html);
       });
     })
@@ -81,13 +97,21 @@ app.get('/users/:userId/posts', (req, res) => {
         </StaticRouter>
       );
 
+      const metaTags = `
+        <title>Proxy Seller - User Posts</title>
+        <meta name="description" content="Proxy Seller - View user posts">
+      `;
+
       fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
         if (err) {
           console.error(err);
           return res.status(500).send("Some error happened!");
         }
 
-        const html = data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+        const html = data
+          .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+          .replace('<title>React App</title>', metaTags);
+
         res.send(html);
       });
     })
@@ -109,13 +133,21 @@ app.get('/users/:userId/albums', (req, res) => {
         </StaticRouter>
       );
 
+      const metaTags = `
+        <title>Proxy Seller - User Albums</title>
+        <meta name="description" content="Proxy Seller - View user albums">
+      `;
+    
       fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
         if (err) {
           console.error(err);
           return res.status(500).send("Some error happened!");
         }
 
-        const html = data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+        const html = data
+          .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+          .replace('<title>React App</title>', metaTags);
+
         res.send(html);
       });
     })
@@ -137,13 +169,21 @@ app.get('/users/:userId/albums/:albumId', (req, res) => {
         </StaticRouter>
       );
 
+      const metaTags = `
+        <title>Proxy Seller - Album</title>
+        <meta name="description" content="Proxy Seller - View album photos">
+      `;
+    
       fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
         if (err) {
           console.error(err);
           return res.status(500).send("Some error happened!");
         }
 
-        const html = data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+        const html = data
+          .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+          .replace('<title>React App</title>', metaTags);
+
         res.send(html);
       });
     })
